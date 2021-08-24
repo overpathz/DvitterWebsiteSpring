@@ -1,8 +1,7 @@
 package com.pathz.web.dvitter.controller;
 
-import com.pathz.web.dvitter.domain.Message;
+import com.pathz.web.dvitter.domain.entity.Message;
 import com.pathz.web.dvitter.repo.MessageRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +15,6 @@ public class MainController {
 
     private final MessageRepo messageRepo;
 
-    @Autowired
     public MainController(MessageRepo messageRepo) {
         this.messageRepo = messageRepo;
     }

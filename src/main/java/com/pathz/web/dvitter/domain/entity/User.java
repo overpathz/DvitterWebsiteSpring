@@ -1,4 +1,4 @@
-package com.pathz.web.dvitter.domain;
+package com.pathz.web.dvitter.domain.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

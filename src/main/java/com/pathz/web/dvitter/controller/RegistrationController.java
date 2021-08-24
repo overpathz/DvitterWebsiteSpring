@@ -1,22 +1,23 @@
 package com.pathz.web.dvitter.controller;
 
-import com.pathz.web.dvitter.domain.Role;
-import com.pathz.web.dvitter.domain.User;
+import com.pathz.web.dvitter.domain.entity.Role;
+import com.pathz.web.dvitter.domain.entity.User;
 import com.pathz.web.dvitter.repo.UserRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.Collection;
 import java.util.Collections;
 
 @Controller
 public class RegistrationController {
 
-    @Autowired
-    private UserRepo userRepo;
+    private final UserRepo userRepo;
+
+    public RegistrationController(UserRepo userRepo) {
+        this.userRepo = userRepo;
+    }
 
     @GetMapping("/registration")
     public String registration() {
