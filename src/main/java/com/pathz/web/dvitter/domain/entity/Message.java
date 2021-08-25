@@ -25,4 +25,7 @@ public class Message {
 
     @Column(name = "tag")
     private String tag;
+
+
+    private User author;
 }
